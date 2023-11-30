@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/2D BlockFun.unity
+    guid: 81dd7d1d346e84eadb9858c679901f66
   m_configObjects: {}
