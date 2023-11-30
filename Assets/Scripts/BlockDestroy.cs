@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class BlockDestroy : MonoBehaviour
 {
-    private void Update()
+     private void OnTriggerEnter(Collider other)
     {
-    
+        if (other.CompareTag("Ball"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

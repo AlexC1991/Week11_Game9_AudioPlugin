@@ -6,6 +6,8 @@ TagManager:
   tags:
   - BlockDestroyCube
   - DestroyBall
+  - Ball
+  - BlockD
   layers:
   - Default
   - TransparentFX

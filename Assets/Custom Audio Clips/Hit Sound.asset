@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0698fe774d8c94b2d9dd2d766d6db191, type: 3}
-  m_Name: Cube Two Audio
+  m_Name: Hit Sound
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 3b3cc726e40532d42a17e2bc520f3389, type: 3}
-  volume: 0.412
-  treble: 0.15
-  bass: 0.63
-  pitch: 1.41
+  audioClip: {fileID: 8300000, guid: 91997343296c8c3488f7c703abe9b203, type: 3}
+  volume: 0.331
+  treble: 0
+  bass: 1
+  pitch: 0.46
