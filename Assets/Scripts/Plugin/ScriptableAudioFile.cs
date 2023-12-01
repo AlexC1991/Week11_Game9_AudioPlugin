@@ -3,16 +3,16 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "AudioData", menuName = "Custom/Audio Data", order = 1)]
 public class ScriptableAudioFile : ScriptableObject
 {
-    public AudioClip audioClip;
-    public float volume = 1.0f;
-    public float treble = 0.0f;
-    public float bass = 0.0f;
-    public float pitch = 1.0f;
+    [SerializeField] private AudioClip audioClip;
+    [HideInInspector] public float volume = 1.0f;
+    [HideInInspector] public float treble = 0.0f;
+    [HideInInspector] public float bass = 0.0f;
+    [HideInInspector] public float pitch = 1.0f;
+    [HideInInspector] public bool loopSound;
 
     // Add an AudioSource field to the ScriptableObject
     [System.NonSerialized]
     private AudioSource audioSource;
-
     // Play the audio using the internal AudioSource
     public void PlayAudio()
     {
@@ -35,6 +35,7 @@ public class ScriptableAudioFile : ScriptableObject
             audioSource.clip = audioClip;
             audioSource.volume = volume;
             audioSource.pitch = pitch;
+            audioSource.loop = loopSound;
 
             // Apply bass boost using low-pass filter
             ApplyBassBoost();
@@ -81,6 +82,15 @@ public class ScriptableAudioFile : ScriptableObject
            }
             }
         }
+    }
+
+    public void ResetAudioControls()
+    {
+        volume = 1.0f;
+        treble = 0.0f;
+        bass = 0.0f;
+        pitch = 1.0f;
+        loopSound = false;
     }
 
     // Restart the audio

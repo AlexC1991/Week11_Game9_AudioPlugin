@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0698fe774d8c94b2d9dd2d766d6db191, type: 3}
   m_Name: gimbo
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 44d5961f97e3f9e4eabe0b24e946450d, type: 3}
-  volume: 1
-  treble: -0.48
-  bass: 0.78
-  pitch: 1.44
+  audioClip: {fileID: 8300000, guid: 0e1b1fdce72115641beb71762c14c798, type: 3}
+  volume: 0.611
+  treble: 0.217
+  bass: 0.484
+  pitch: 0.456
+  loopSound: 1
