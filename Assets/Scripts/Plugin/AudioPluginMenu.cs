@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AudioPluginMenu
 {
-    [MenuItem("Custom/Create Audio Data")]
+    [MenuItem("Audio Plugin/Create Audio Data")]
     public static void CreateAudioData()
     {
         ScriptableAudioFile audioData = ScriptableObject.CreateInstance<ScriptableAudioFile>();

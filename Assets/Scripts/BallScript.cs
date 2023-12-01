@@ -41,6 +41,12 @@ public class BallScript : MonoBehaviour
             transform.position = ballStartPosition;
             BallDeathBarrier.hitLocation = false;
         }
+
+        //if (PlayerBlockMovement.changeDirection)
+       //{
+            //gameObject.AddForce + 1;
+            //PlayerBlockMovement.changeDirection = false;
+        //}
     
     }
 }
