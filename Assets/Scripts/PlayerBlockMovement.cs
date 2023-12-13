@@ -9,12 +9,14 @@ public class PlayerBlockMovement : MonoBehaviour
    private float horizontalMovement;
    public float horizontalMovementSpeed = 5f; // Adjust this speed as needed
    public ScriptableAudioFile bounceSound;
+   public static bool changeDirection;
 
       private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
         {
             bounceSound.PlayAudio();
+            changeDirection = true;
         }
     }
 

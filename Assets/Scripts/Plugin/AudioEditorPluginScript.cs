@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,12 +19,20 @@ public class AudioEditorPluginScript : Editor
 
         GUILayout.Space(10);
 
+        if (GUILayout.Button("Reset Controls"))
+        {
+            audioData.ResetAudioControls();
+        }
+
+        GUILayout.Space(5);
+
         // Custom controls for editing audio parameters
         EditorGUILayout.LabelField("Audio Controls", EditorStyles.boldLabel);
         audioData.volume = EditorGUILayout.Slider("Volume", audioData.volume, 0.0f, 1.0f);
         audioData.treble = EditorGUILayout.Slider("Treble", audioData.treble, -1.0f, 1.0f);
-        audioData.bass = EditorGUILayout.Slider("Bass Boost", audioData.bass, -1.0f, 1.0f);
-        audioData.pitch = EditorGUILayout.Slider("Pitch", audioData.pitch, 0.1f, 3.0f);
+        audioData.bass = EditorGUILayout.Slider("Bass Boost", audioData.bass, 0, 1.0f);
+        audioData.pitch = EditorGUILayout.Slider("Pitch", audioData.pitch, 0.1f, 2.0f);
+        audioData.loopSound = EditorGUILayout.Toggle("Loop Audio", audioData.loopSound);
 
         GUILayout.Space(20);
 
@@ -51,5 +60,6 @@ public class AudioEditorPluginScript : Editor
         {
             audioData.RestartAudio();
         }
-    }     
+    } 
 }
+#endif
